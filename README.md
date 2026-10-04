@@ -1,87 +1,77 @@
-# ft_printf Helper 🎣
+# ft_printf Helper Guides
 
-Hi, I'm **Hayat Ahel**. I made this repo to help new corers figure out where to start with `ft_printf`.
+*A study companion for 42 newcomers working on the ft_printf project — not a solution repo.*
 
-> 🐟 **Want the fish instead?**
-> My actual completed ft_printf is here: **[my ft_printf](YOUR_REPO_LINK)**
->
-> You can look. I'm not your evaluator 😭
-> But this helper exists because I think figuring it out yourself is way more useful than copying how someone else did it.
+This repo exists to help Core students **think through** ft_printf on their own, without
+handing over code or answers. It's organized around the official subject and gives you:
 
-## Why I Made This
+- a plain-words explanation of **what each piece is for**
+- things to **think about** before you start coding
+- a few **"go find out"** questions — details I deliberately left out so you have to look
+  them up yourself (that's where the learning sticks)
+- the **man page(s)** you should read
+- **resources** to help you understand the underlying concept
 
-The idea is simple:
+There is **no code** here. No finished algorithms, no prototypes spelled out. Reading the
+man pages and the subject PDF is part of the exercise.
 
-**I don't want to teach you how to do ft_printf. I want to teach you how to figure out how to do ft_printf.**
+> If you want to compare against a finished implementation *after* you've written your
+> own, see [my-ft_printf](https://github.com/cutie-hijabie/my-ft_printf) — but try first.
 
-Because after this project there will be another subject you don't understand, and then another one, and another one.
+## Why this exists
 
-So we're using `ft_printf` to practice a process you can reuse:
+At 42, the point of ft_printf isn't to produce a `libftprintf.a` — it's to understand:
 
-**Understand → Question → Research → Break It Down → Build & Debug → Explain & Reflect**
+- how a function can accept a **variable number of arguments**
+- how to **parse** a string and react to what's in it
+- how numbers are **represented** (signed vs unsigned, different bases) and turned into text
+- how pointers look as values
+- how to **split a bigger problem** into small, single-purpose pieces
+- how real library functions behave in the corners, not just the happy path
 
----
+Copy-pasting an answer (from AI or anywhere else) skips all of that. You'll feel it in
+your defense, and you'll feel it harder in exams with no AI and no internet.
 
-## [01 — Understand](./01-understand/)
+## How to use this repo
 
-**What am I actually being asked to do?**
+1. Read the subject PDF first. Keep it open next to you the whole time.
+2. Start with [00 — Big picture](guides/00-big-picture.md), then work through the guides in order.
+3. For each conversion, open its page in `guides/conversions/`.
+4. Read the man pages linked. Actually read them.
+5. Answer the "Think about" questions *before* touching your editor — on paper is fine.
+6. Write it. Get it wrong. Debug it. That's the project.
+7. Compare your output to the real `printf` constantly, not just at the end.
 
-Read the subject properly, play with the real `printf`, and understand the problem before touching your implementation.
+## Guides
 
-## [02 — Question](./02-question/)
+| # | Guide | What it covers |
+|---|-------|----------------|
+| 00 | [Big picture](guides/00-big-picture.md) | What printf actually does, and a sensible order to build in |
+| 01 | [Variadic functions](guides/01-variadic-functions.md) | How `...` works and what it can't tell you |
+| 02 | [Parsing the format string](guides/02-parsing-the-format-string.md) | Walking the string and deciding what each character means |
+| 03 | [The return value](guides/03-return-value.md) | Counting what you print |
+| 04 | [Structuring your project](guides/04-structuring-your-project.md) | Files, helpers, Norm, Makefile |
+| 05 | [Testing and debugging](guides/05-testing-and-debugging.md) | How to catch your own bugs |
+| 06 | [Common pitfalls](guides/06-common-pitfalls.md) | Questions that catch most people out |
+| 07 | [Bonus](guides/07-bonus.md) | Flags, width, precision — a map, not a walkthrough |
 
-**What exactly don't I know?**
+Per-conversion guides live in [`guides/conversions/`](guides/conversions/README.md):
+`%c` · `%s` · `%p` · `%d` / `%i` · `%u` · `%x` / `%X` · `%%`
 
-"I don't know how to do ft_printf" is too big of a problem. Let's turn that into smaller questions you can actually answer.
+## General resources (not specific to one guide)
 
-## [03 — Research](./03-research/)
+- [Beej's Guide to C Programming](https://beej.us/guide/bgc/) — one of the best free C intros. Look for the chapter on variadic functions.
+- `man 3 printf` — your spec. The conversion and return-value sections are the important ones.
+- `man 3 stdarg` — everything about variable argument lists.
+- `man 2 write` — the only output function you're allowed to build on. Read its return value section.
+- [cppreference: variadic arguments](https://en.cppreference.com/w/c/variadic)
+- [42 Norminette](https://github.com/42School/norminette) — know the Norm before you write a line.
+- `valgrind --leak-check=full ./your_test` — find leaks before your evaluator does.
 
-**How do I find the answer myself?**
+## A note on AI
 
-Learn how to use man pages, documentation, experiments, and Google without immediately searching for someone else's solution.
-
-## [04 — Break It Down](./04-break-it-down/)
-
-**How do I turn this into something I can build?**
-
-Break the big scary project into smaller problems and make **your own** plan for solving them.
-
-## [05 — Build & Debug](./05-build-and-debug/)
-
-**Does my idea actually work?**
-
-Build something small → test it → break it → figure out why → fix it → repeat.
-
-## [06 — Explain & Reflect](./06-explain-and-reflect/)
-
-**Do I actually understand what I wrote?**
-
-If it works, great. Now make sure you know **why** it works and that you could explain your decisions to someone else.
-
-## [Resources](./resources/)
-
-Man pages, documentation, useful links, and other places to go when you need to learn something.
-
----
-
-## How to Use This
-
-Don't sit down and read the whole repo.
-
-Start at **01**. Do the things. Experiment. Go write some code. Come back when you need the next step.
-
-I'll give you questions, hints, things to research, and places to look.
-
-I'm **not** going to tell you what functions to make or give you my solution here.
-
-And if you get stuck:
-
-**try → make the question smaller → research → experiment → ask for help.**
-
-You don't need to suffer for six hours to prove you tried. You just need to give yourself the chance to figure it out first.
-
-Hopefully by the end you don't just know how to do `ft_printf`.
-
-You know what to do the next time you open a 42 subject and go:
-
-**"what the hell am I supposed to do with this?"** 🎣
+Per the subject's own AI Instructions chapter: you're expected to *reason first*, and not
+ask AI for direct answers. This repo was built to give explanations and pointers to
+official documentation only — never generated code, never filled-in logic. If you use AI
+yourself while learning, the healthiest use is asking it to explain a concept you already
+tried to understand from the man page — not asking it to write or fix your function.
