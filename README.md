@@ -41,10 +41,6 @@ your defense, and you'll feel it harder in exams with no AI and no internet.
 5. Answer the "Think about" questions *before* touching your editor — on paper is fine.
 6. Write it. Get it wrong. Debug it. That's the project.
 7. Compare your output to the real `printf` constantly, not just at the end.
-8. Before you submit, read [07 — README and defense](guides/07-readme-and-defense.md).
-
-> Based on subject **version 1.1**, which has **no bonus part**. If your subject version
-> differs, the subject always wins over this repo.
 
 ## Guides
 
@@ -57,7 +53,6 @@ your defense, and you'll feel it harder in exams with no AI and no internet.
 | 04 | [Structuring your project](guides/04-structuring-your-project.md) | Files, helpers, Norm, Makefile |
 | 05 | [Testing and debugging](guides/05-testing-and-debugging.md) | How to catch your own bugs |
 | 06 | [Common pitfalls](guides/06-common-pitfalls.md) | Questions that catch most people out |
-| 07 | [README and defense](guides/07-readme-and-defense.md) | The README the subject requires, and what to expect in the review |
 
 Per-conversion guides live in [`guides/conversions/`](guides/conversions/README.md):
 `%c` · `%s` · `%p` · `%d` / `%i` · `%u` · `%x` / `%X` · `%%`
