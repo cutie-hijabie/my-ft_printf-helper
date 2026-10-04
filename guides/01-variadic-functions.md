@@ -22,7 +22,8 @@ else is stuff you've done before in different clothing.
 ## Go find out
 
 - `stdarg.h` provides **one type and a small handful of macros**. Find them in the man
-  page and work out what role each plays and in what order they're used.
+  page and work out what role each plays and in what order they're used. The subject's
+  allowed-functions list names four of them — match each to its job. Do you need all four?
 - What happens to small types (like `char` or `short`) when they're passed through `...`?
   This has a direct consequence for what type you should ask for when reading a `%c`
   argument. (Search: *default argument promotions*.)

@@ -22,6 +22,8 @@ Everything else in the project is just those three jobs, repeated for different 
 - Where does the *knowledge about each conversion* live — inside the loop, or somewhere else?
 - What does the subject say you do **not** need to replicate from the real printf (look for
   the word "buffer")?
+- The subject says your function "will be compared against the original printf()". What
+  exactly does that imply you must match — only what appears on screen, or something more?
 
 ## A sensible order to build in
 
@@ -38,6 +40,8 @@ You don't have to follow this, but it keeps you from drowning:
 
 ## Go find out
 
+- The subject lists exactly nine conversions. Which characters are they, and what does each
+  one print, according to the subject's one-line descriptions?
 - What does `man 3 printf` call the part of the format that comes after `%`? Learn the
   vocabulary (conversion specifier, flags, etc.) — it makes searching much easier later.
 

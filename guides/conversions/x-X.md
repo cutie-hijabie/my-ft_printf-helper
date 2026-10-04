@@ -12,7 +12,7 @@ Printing an unsigned integer in **hexadecimal**: lowercase letters for `%x`, upp
   answer be *data* instead of a long chain of conditions?
 - `%x` and `%X` differ in one tiny way. Do you really need two separate functions?
 - What's the output for zero?
-- No `0x` prefix here. (That belongs to `%p` — and to a bonus flag.)
+- No `0x` prefix here. Compare with what the real printf does for `%p`.
 - Could a single helper serve `%u`, `%x`, `%X` **and** `%p`? What would its inputs be?
 
 ## Go find out

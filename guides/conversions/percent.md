@@ -15,8 +15,8 @@ Printing a literal `%` — the way to write a percent sign when `%` normally mea
 
 ## Go find out
 
-- What does the real printf do with `"%5%"` or `"% %"`? (Not required for mandatory — but
-  good for understanding where bonus complexity comes from.)
+- What does the real printf do with `"%5%"` or `"% %"`? (Not required by the subject — but
+  a good way to see how much more the real printf does than you're asked to copy.)
 
 ## Man page
 
